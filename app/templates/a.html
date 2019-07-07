@@ -21,7 +21,7 @@
 				<h3>Task 1a</h3>
 			</div>
 			<div class="col-6">
-				<button class="btn btn-light float-right">
+				<button class="btn btn-light float-right" id="reset">
 					Reset
 				</button>
 			</div>
@@ -63,7 +63,32 @@
 
 
 <script type="text/javascript">
-	// your solution here
+	const $purpleButton = $('.bg-purple');
+  const $greenButton = $('.bg-green');
+  const $blueButton = $('.bg-blue');
+  const $orangeBorder = $('.bg-orange.p2-border');
+  const $gradientButton = $('#gradient-circle');
+  
+  $purpleButton.on('click', () => {
+    $purpleButton.hide();
+  });
+  
+  $greenButton.on('click', () => {
+    $greenButton.hide();
+    $blueButton.hide();
+  });
+  
+  $orangeBorder.on('click', () => {
+    $orangeBorder.hide();
+  });
+  
+  $gradientButton.on('mouseenter', () => {
+    $gradientButton.hide();
+  });
+  
+  $('#reset').on('click', () => {
+    $('.p2-circle').show();
+  })
 
 </script>
 </body>
